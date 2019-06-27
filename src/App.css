@@ -2,15 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 20vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,11 +17,51 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.drag-section,
+.sort-section {
+  align-items: center;
+  border: 3px dashed rgba(0, 0, 0, 0.4);
+  display: flex;
+  margin: 20px;
+  min-height: 200px;
+}
+
+.drag-section {
+  padding: 20px;
+  justify-content: center;
+}
+
+.sort-section {
+  flex-wrap: wrap;
+  min-height: 400px;
+}
+
+.sort-item {
+  background: linear-gradient(145deg, #f0f3f4, #e7ebee);
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 3px;
+  height: 300px;
+  margin: calc(0.66% - 1px);
+  pointer-events: auto;
+  width: 32%;
+}
+
+@media (max-width: 768px) {
+  .sort-item {
+    margin: calc(1% - 1px);
+    width: 48%;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+.sort-item div {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.sort-item div * {
+  word-break: break-word;
 }
