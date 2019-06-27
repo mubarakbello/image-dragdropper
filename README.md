@@ -1,11 +1,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Image DragDropper
+# Image DragDropper
 
 This is a fun project to experiment drag-n-drop, and image re-ordering with ReactJs.
-Built with `react-dropzone` and `react-sortable-hoc` components
+Built with [react-dropzone](https://github.com/react-dropzone/react-dropzone) and [react-sortable-hoc](https://github.com/clauderic/react-sortable-hoc) components
 
-# Branches
+## Branches
 The different forms of using the component libraries will be arranged in branches and the `master` branch will contain a very simple form.
 
 In the project directory, you can run:
