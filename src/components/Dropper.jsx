@@ -69,7 +69,12 @@ class Dropper extends Component {
   render() {
     return (
       <div>
-        <DropZone ref={"dropzone"} onDrop={this.onDrop} multiple>
+        <DropZone
+          ref={"dropzone"}
+          onDrop={this.onDrop}
+          accept={['image/png', 'image/jpg', 'image/jpeg']}
+          multiple
+        >
           {({getRootProps, getInputProps}) => (
             <section className="drag-section">
               <div {...getRootProps()}>
@@ -81,6 +86,7 @@ class Dropper extends Component {
         </DropZone>
         <SortableList
           axis="xy"
+          lockAxis="xy"
           onSortEnd={this.onSortEnd}
           files={this.state.files}
           onclic={() => this.refs.dropzone.open()}
